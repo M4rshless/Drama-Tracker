@@ -1,82 +1,143 @@
+/* ================================
+   1. GENERAL STYLES
+   ================================ */
+
+/*This is a root element. Used to set Universal */
+:root {
+    --cream: #f1e7d4;
+    --warm-white: #fff9f0;
+    --ink: #1a1410;
+    --muted: #7a6e64;
+    --soft: #c8bfb3;
+    --accent: #c8472b;
+    --accent-light: #f5ded9;
+    --card-shadow: 0 2px 20px rgba(0,0,0,0.07);
+    --card-shadow-hover: 0 8px 40px rgba(0,0,0,0.13);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    min-height: 100vh;
+    line-height: 1.6;
+    border: 3px #c8472b;
+    border-style:dashed;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    margin: 1rem;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
 
 
-/* Nav buttons specifically */
+/* ================================
+   2. HEADER
+   ================================ */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 2rem;
+}
+
+/* LINE BORDER SEPERATER*/
+hr {
+    border: none;
+    border-top: 1.5px solid black;
+    width: 90%;
+    margin: 10px auto;
+}
+
+
+/* ================================
+   3. NAV
+   ================================ */
+
+/* Nav buttons specifically - This adjusts all the properties of the text and the box */
+
 .btn-nav {
-    background-color: rgb(24, 62, 158);
+    background-color: var(--muted);
     color: white;
     border: 5px outset;
-    border-color: #547bcb;
+    border-color: var(--soft);
     font-family: 'DM Sans', sans-serif;
     width: 100px;
     height: 50px;
     font-size: 22px;
     border-radius: 10px;
+    box-shadow: 5px 5px var(--ink);
+    margin-top: 5px;
 }
 
-.top-dashboard-title-setup
+/* Button Animation When Hover */
+.btn-nav:hover {
+    transform: translateY(-1px);
+    box-shadow: 0px 5px 10px var(--accent);
+    cursor: pointer;
+}
 
 
-
-
-/* Header Properties*/
-
-.header {
+/* Adds gap to buttons without affecting titles */
+.pages {
     display: flex;
+    gap: 10px;
+}
+
+/* Removes default link styling around nav buttons */
+.pages a {
+    text-decoration: none;
+}
+
+
+/* ================================
+   4. CONTENT
+   ================================ */
+
+/* Centers content below the header */
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    
 }
 
-
-
-/* Box Properties*/
-#box{
-    width: 100px;
-    height: 100px;
-    border:50px solid var(--accent);
-    border-radius: 20px;
-    border-width: 20px;
-    border-style: dashed;
+/* login-box properties*/
+.login-box {
+    width: 200px;
+    height: 150px;
+    border: 5px solid var(--accent);
+    border-radius: 10px;
+    background-color: var(--soft);
+    border-width:4px;
+    border-style:outset;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
 }
-/*This is a root element. Used to set Universal */
-  :root {
-      --cream: #f1e7d4;
-      --warm-white: #fff9f0;
-      --ink: #1a1410;
-      --muted: #7a6e64;
-      --soft: #c8bfb3;
-      --accent: #c8472b;
-      --accent-light: #f5ded9;
-      --card-shadow: 0 2px 20px rgba(0,0,0,0.07);
-      --card-shadow-hover: 0 8px 40px rgba(0,0,0,0.13);
-    }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--cream);
-      color: var(--ink);
-      min-height: 100vh;
-      line-height: 1.6;
-    }
-
-    h1, h2, h3 {
-      font-family: 'Playfair Display', serif;
-      font-weight: 700;
-      margin: 1rem;
-    }
-
-    h1 { font-size: 2.5rem; }
-    h2 { font-size: 2rem; }
-    h3 { font-size: 1.5rem; }
-
-/* LINE BORDER SEPERATER*/
-hr {
-  border: none; /* Remove default border */
-  border-top: 2px solid black; /* Add a custom top border to act as the line */
-  width: 80%; /* Control the length */
-  margin: 20px auto; /* Center the line and add spacing */
+/* Profile Picture */
+.pfp {
+    width: 50px;
+    height: 50px;
+    background-color: var(--accent);
+    border-radius: 50%;
 }
+
+/* ================================
+   5. FOOTER
+   ================================ */
