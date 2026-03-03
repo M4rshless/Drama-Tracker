@@ -1,0 +1,82 @@
+
+
+/* Nav buttons specifically */
+.btn-nav {
+    background-color: rgb(24, 62, 158);
+    color: white;
+    border: 5px outset;
+    border-color: #547bcb;
+    font-family: 'DM Sans', sans-serif;
+    width: 100px;
+    height: 50px;
+    font-size: 22px;
+    border-radius: 10px;
+}
+
+.top-dashboard-title-setup
+
+
+
+
+/* Header Properties*/
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+
+
+/* Box Properties*/
+#box{
+    width: 100px;
+    height: 100px;
+    border:50px solid var(--accent);
+    border-radius: 20px;
+    border-width: 20px;
+    border-style: dashed;
+}
+/*This is a root element. Used to set Universal */
+  :root {
+      --cream: #f1e7d4;
+      --warm-white: #fff9f0;
+      --ink: #1a1410;
+      --muted: #7a6e64;
+      --soft: #c8bfb3;
+      --accent: #c8472b;
+      --accent-light: #f5ded9;
+      --card-shadow: 0 2px 20px rgba(0,0,0,0.07);
+      --card-shadow-hover: 0 8px 40px rgba(0,0,0,0.13);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      margin: 1rem;
+    }
+
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.5rem; }
+
+/* LINE BORDER SEPERATER*/
+hr {
+  border: none; /* Remove default border */
+  border-top: 2px solid black; /* Add a custom top border to act as the line */
+  width: 80%; /* Control the length */
+  margin: 20px auto; /* Center the line and add spacing */
+}
