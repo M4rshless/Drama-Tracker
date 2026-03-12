@@ -1,0 +1,110 @@
+
+/* Login box entrance animation */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Win98 font — add this to your <head> if not already there:
+   <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet"> */
+
+/* Login-box properties */
+.login-box {
+  width: 280px;
+  background: #c0c0c0;
+  border-top:    2px solid #ffffff;
+  border-left:   2px solid #ffffff;
+  border-right:  2px solid #808080;
+  border-bottom: 2px solid #808080;
+  box-shadow: 1px 1px 0 #000, inset 1px 1px 0 #dfdfdf;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: slideUp 0.8s ease-out;
+  padding-bottom: 16px;
+  font-family: 'VT323', monospace;
+}
+
+/* Title bar (replaces your "Login" heading) */
+.login-box h2,
+.login-box .login-title {
+  width: 100%;
+  background: #000080;
+  color: #ffffff;
+  font-family: 'VT323', monospace;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  padding: 4px 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+/* Input fields */
+.login-box input[type="text"],
+.login-box input[type="password"] {
+  width: calc(100% - 32px);
+  height: 24px;
+  background: #ffffff;
+  border-top:    2px solid #808080;
+  border-left:   2px solid #808080;
+  border-right:  2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  font-family: 'VT323', monospace;
+  font-size: 17px;
+  padding: 0 6px;
+  margin-bottom: 8px;
+  outline: none;
+  color: #000;
+}
+
+.login-box input[type="text"]:focus,
+.login-box input[type="password"]:focus {
+  outline: 1px dotted #000;
+  outline-offset: -3px;
+}
+
+/* Submit button */
+.login-box input[type="submit"],
+.login-box button[type="submit"] {
+  min-width: 80px;
+  height: 26px;
+  background: #c0c0c0;
+  border-top:    2px solid #ffffff;
+  border-left:   2px solid #ffffff;
+  border-right:  2px solid #808080;
+  border-bottom: 2px solid #808080;
+  box-shadow: 1px 1px 0 #000;
+  font-family: 'VT323', monospace;
+  font-size: 18px;
+  color: #000000;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  padding: 0 16px;
+  margin-top: 8px;
+  outline: none;
+}
+
+.login-box input[type="submit"]:active,
+.login-box button[type="submit"]:active {
+  border-top:    2px solid #808080;
+  border-left:   2px solid #808080;
+  border-right:  2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  box-shadow: none;
+  padding-top: 2px;
+}
+
+.login-box input[type="submit"]:focus,
+.login-box button[type="submit"]:focus {
+  outline: 1px dotted #000000;
+  outline-offset: -4px;
+}
+
+

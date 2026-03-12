@@ -23,12 +23,12 @@
 
 body {
     font-family: 'DM Sans', sans-serif;
-    background: var(--cream);
+    background: var(--warm-white);
     color: var(--ink);
     min-height: 100vh;
     line-height: 1.6;
-    border: 3px #c8472b;
-    border-style:dashed;
+    display: flex;
+    flex-direction: column;
 }
 
 h1, h2, h3 {
@@ -50,13 +50,18 @@ h3 { font-size: 1.5rem; }
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-right: 2rem;
+    padding: 6px 2rem;
+}
+
+.header h1 {
+    font-size: 1.25rem;
+    margin: 0;
 }
 
 /* LINE BORDER SEPERATER*/
 hr {
     border: none;
-    border-top: 1.5px solid black;
+    border-top: 1.5px solid var(--muted);
     width: 90%;
     margin: 10px auto;
 }
@@ -69,24 +74,22 @@ hr {
 /* Nav buttons specifically - This adjusts all the properties of the text and the box */
 
 .btn-nav {
-    background-color: var(--muted);
-    color: white;
-    border: 5px outset;
-    border-color: var(--soft);
-    font-family: 'DM Sans', sans-serif;
-    width: 100px;
-    height: 50px;
-    font-size: 22px;
-    border-radius: 10px;
-    box-shadow: 5px 5px var(--ink);
-    margin-top: 5px;
+    padding: 7px 16px;
+  border-radius: 40px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  transition: all 0.2s;
 }
 
 /* Button Animation When Hover */
 .btn-nav:hover {
-    transform: translateY(-1px);
-    box-shadow: 0px 5px 10px var(--accent);
     cursor: pointer;
+    background: var(--ink);
+    color: white;
 }
 
 
@@ -94,12 +97,14 @@ hr {
 .pages {
     display: flex;
     gap: 10px;
+
+a {
+    text-decoration: none;
+    
+}
 }
 
-/* Removes default link styling around nav buttons */
-.pages a {
-    text-decoration: none;
-}
+
 
 
 /* ================================
@@ -112,40 +117,15 @@ hr {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+    flex: 1;
 }
 
-/* Login box entrance animation */
-@keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
-/* login-box properties*/
-.login-box {
-    width: 200px;
-    height: 150px;
-    border: 5px solid var(--accent);
-    border-radius: 10px;
-    background-color: var(--soft);
-    border-width:4px;
-    border-style:outset;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    animation: slideUp 0.8s ease-out;
-}
 
 /* Profile Picture */
 .pfp {
-    width: 50px;
-    height: 50px;
+    width: 36px;
+    height: 36px;
     background-color: var(--accent);
     border-radius: 50%;
 }
@@ -153,3 +133,21 @@ hr {
 /* ================================
    5. FOOTER
    ================================ */
+
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--warm-white);
+    font-family: 'VT323', monospace;
+}
+
+
+
+
+
+
+
