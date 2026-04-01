@@ -18,8 +18,6 @@ function updateDots(index) {
 }
 
 
-//BELOW IS THE AUTOMATIC SLIDE FUNCTIONALITY
-
 // Light up the first dot immediately when the page loads
 updateDots(0);
 

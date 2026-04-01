@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login Page</title>
-    <link rel="stylesheet" href=".\styles\styles.css" />
-    <link rel="stylesheet" href=".\styles\login-box.css" />
-    <link rel="stylesheet" href=".\styles\image-slider.css" />
+    <title>Homepage</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./styles/login-box.css" />
+    <link rel="stylesheet" href="./styles/image-slider.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700&display=swap"
       rel="stylesheet"
@@ -14,40 +14,39 @@
   </head>
 
   <body>
-    <div class="header">
-      <!-- Positions the title and other headers cleanly-->
-      <h1>[The Drama]</h1>
-      <nav class="pages">
-        <a href="homepage.html"><button class="btn-nav">Home</button></a>
-        <button class="btn-nav">Search</button>
-        <button class="btn-nav">Trio</button>
-        <button class="btn-nav">About</button>
-        <a href="login-page.html"><button class="btn-nav">Login</button></a>
-      </nav>
-      <div class="pfp"></div>
+
+    <!-- Header loads here automatically -->
+    <div id="header"></div>
+
+    <!-- Your page content stays exactly the same -->
+    <div>
+      This is the homepage
     </div>
-    <hr />
 
-    This is the homepage - One tracker for all your drama needs. 
     <section class="container">
-        <div class="slider-wrapper">
-            <div class="slider">
-              <img id="slide1" src=".\images\smi-laptop.png" alt="picture1" />
-              <img id="slide2" src=".\images\smifold.png" alt="picture2" />
-              <img id="slide3" src=".\images\smipaint.png" alt="picture3" />
-            </div>
-            <div class="slider-nav">
-              <a href ="#slide1"></a>
-              <a href ="#slide2"></a>
-              <a href ="#slide3"></a>
-            </div>
+      <div class="slider-wrapper">
+        <div class="slider">
+          <img id="slide1" src="./images/smi-laptop.png" alt="picture1" />
+          <img id="slide2" src="./images/smifold.png" alt="picture2" />
+          <img id="slide3" src="./images/smipaint.png" alt="picture3" />
         </div>
+        <div class="slider-nav">
+          <a href="#slide1"></a>
+          <a href="#slide2"></a>
+          <a href="#slide3"></a>
+        </div>
+      </div>
     </section>
-     </div>
-<div class="footer">
-    <hr />
-    <p>&copy; Charles Plana</p>
 
-  <script src=".\scripts\slider.js"></script>
+    <!-- Footer loads here automatically -->
+    <div id="footer"></div>
+
+    <script src="./scripts/slider.js"></script>
+    <script src="./scripts/components.js"></script>
+    <script>
+      renderHeader('home')
+      renderFooter()
+    </script>
+
   </body>
 </html>
