@@ -9,7 +9,7 @@ function renderHeader(activePage) {
           <button class="btn-nav ${activePage === 'home' ? 'active' : ''}">Home</button>
         </a>
         <a href="discover.html">
-          <button class="btn-nav ${activePage === 'discover' ? 'active' : ''}">YAMAAMAMMA</button>
+          <button class="btn-nav ${activePage === 'discover' ? 'active' : ''}">About</button>
         </a>
         <a href="watchlist.html">
           <button class="btn-nav ${activePage === 'watchlist' ? 'active' : ''}">Watchlist</button>
